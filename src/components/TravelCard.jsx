@@ -4,7 +4,7 @@ export default function TravelCard(props) {
     const {img, location, googleMap, title, date, info} = props
     return (
         <div className="card">
-            <img src={img} className="card--image"/>
+            <img src={img} className="card--image" alt="a photo of me" />
             <div>
                 <div className="card--info--map">
                     <img src={icon} className="icon" alt="location icon" />
