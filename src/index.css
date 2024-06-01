@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --bg-accent-clr: #F55A5A;
+  --text-clr-shadow: #918E9B;
+  --text-divider: #F5F5F5;
+  --txt-clr: #2B283A;
+}
+
+body, html {
+  font-family: Inter, "Sans serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--txt-clr);
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-accent-clr);
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.card {
+  display: flex;
+  gap: 0.4rem;
+  width: 95%;
+  margin-top: 2rem; 
+  position: relative;
+}
+
+.card::after {
+  content: '';
+  display: block;
+  width: 95vw;
+  height: 0.1rem;
+  margin-top: 15rem;
+  background: var(--text-divider);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1rem;
+}
+
+.card:last-child::after {
+  display: none; 
+
+}
+.card:last-child {
+  margin-bottom: 1rem;
+}
+
+.card--image {
+  border-radius: 9px;
+  margin-left: 1rem;
+  width: 45%;
+  object-fit: cover;
+  object-position: 35%;
+}  
+
+
+.card--info--map {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.card--location {
+  font-size: 70%;
+  letter-spacing: 0.5rem;
+}
+
+.card--google-maps {
+  font-size: 0.8rem;
+  color: var(--text-clr-shadow);
+  text-decoration-line: underline;
+  margin-left: 0.5rem;
+}
+
+.card--title {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.card--date {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.card--description {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin: 0.4rem 0.5rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    text-align: left;
+  }
+  .card {
+    gap: 1rem;
+    align-items: center;
+  }
+  .card--title, .card--description {
+    margin: 0;
+  }
+  .card--image {
+    max-width: 30%;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    align-items: stretch;
+  }
+
+  .card--image {
+    max-width: 45%;
+    width: 30%;
+
+  }
+}
+
+
